@@ -96,6 +96,11 @@
                                 Marketplace →
                             </a>
                         </li>
+                        <li>
+                            <a href="http://crabskill.test/about" target="_blank" class="block px-3 py-2 rounded-lg text-sm text-neutral-400 hover:text-white hover:bg-neutral-800">
+                                About →
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
