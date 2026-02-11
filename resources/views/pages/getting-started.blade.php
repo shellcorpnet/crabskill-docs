@@ -13,8 +13,8 @@
     <p>Before you begin, make sure you have:</p>
     <ul>
         <li><strong>OpenClaw</strong> installed and configured</li>
-        <li>A <strong>skills directory</strong> (usually <code>~/.openclaw/skills</code>)</li>
-        <li><strong>curl</strong> and <strong>bash</strong> (standard on macOS and Linux)</li>
+        <li>A <strong>skills directory</strong> (usually <code>~/.openclaw/workspace/skills</code>)</li>
+        <li><strong>Node.js 16+</strong> (for the CLI) or <strong>curl/bash</strong> (for manual installs)</li>
     </ul>
 
     <div class="bg-blue-500/10 border border-blue-500/30 rounded-lg p-6 mb-8">
@@ -26,19 +26,32 @@
     </div>
 
     <h2>Install Your First Skill</h2>
+    
+    <h3>Method 1: Using npx (Recommended)</h3>
     <p>
-        Installing a skill is as simple as running a single command. Let's install the <code>weather</code> skill:
+        The easiest way to install skills is with the CrabSkill CLI. No global install needed:
+    </p>
+    <pre><code>npx crabskill install weather</code></pre>
+
+    <h3>Method 2: Global CLI Install</h3>
+    <p>
+        For frequent use, install the CLI globally:
+    </p>
+    <pre><code>npm install -g crabskill
+
+# Then use without npx
+crabskill install weather</code></pre>
+
+    <h3>Method 3: curl | bash</h3>
+    <p>
+        If you don't have Node.js, use the shell script:
     </p>
     <pre><code>curl -sL crabskill.com/install/weather | bash</code></pre>
-    <p>
-        This will download the skill and place it in your OpenClaw skills directory. The skill is now 
-        available to your agent.
-    </p>
 
     <h3>What Happens During Installation</h3>
     <ol>
-        <li>The install script downloads the skill package from CrabSkill</li>
-        <li>It extracts the contents to <code>~/.openclaw/skills/&lt;skill-name&gt;/</code></li>
+        <li>The CLI downloads the skill package from CrabSkill</li>
+        <li>It extracts the contents to <code>~/.openclaw/workspace/skills/&lt;skill-name&gt;/</code></li>
         <li>The skill's <code>SKILL.md</code> file tells your agent what the skill does</li>
         <li>Your agent can now use the skill in future conversations</li>
     </ol>
@@ -47,7 +60,7 @@
     <p>
         Want your agent to install skills automatically? Install the CrabSkill meta-skill:
     </p>
-    <pre><code>curl -sL crabskill.com/install/crabskill | bash</code></pre>
+    <pre><code>npx crabskill install crabskill</code></pre>
     <p>
         Once installed, your agent can search for and install skills without any manual intervention.
     </p>
@@ -64,19 +77,15 @@ You: Yes, please.
 Agent: Installing github-actions skill...
        Done! I can now help you with GitHub Actions.</code></pre>
 
-    <h2>API Key (Optional)</h2>
+    <h2>CLI Authentication (Optional)</h2>
     <p>
-        For premium features like purchasing paid skills and automatic updates, you'll need an API key:
+        For premium features like purchasing paid skills and publishing, register or login:
     </p>
-    <ol>
-        <li>Create an account at <a href="https://crabskill.com/register">crabskill.com</a> (or use GitHub/Google OAuth)</li>
-        <li><strong>Verify your email</strong> (required for purchasing paid skills)</li>
-        <li>Go to your <a href="https://crabskill.com/dashboard">Dashboard</a></li>
-        <li>Generate an API key</li>
-        <li>Add it to your environment:
-            <pre><code>export CRABSKILL_API_KEY="your-api-key-here"</code></pre>
-        </li>
-    </ol>
+    <pre><code># Register a new account
+npx crabskill register
+
+# Or login with an existing API key
+npx crabskill login</code></pre>
 
     <div class="bg-orange-500/10 border border-orange-500/30 rounded-lg p-6 mb-8">
         <h3 class="text-orange-400 font-bold mb-2">⚠️ Email Verification</h3>
@@ -85,6 +94,25 @@ Agent: Installing github-actions skill...
             Check your inbox after signup, or resend from the dashboard.
         </p>
     </div>
+
+    <h2>CLI Quick Reference</h2>
+    <pre><code># Search for skills
+npx crabskill search calendar
+
+# Install a skill
+npx crabskill install google-calendar
+
+# List installed skills
+npx crabskill list
+
+# Update all skills
+npx crabskill update
+
+# Get skill info
+npx crabskill info weather
+
+# Show help
+npx crabskill --help</code></pre>
 
     <h2>Next Steps</h2>
     <ul>

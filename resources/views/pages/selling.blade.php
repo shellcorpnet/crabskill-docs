@@ -21,6 +21,15 @@
     </p>
 
     <h3>Step 2: Start Seller Onboarding</h3>
+    
+    <h4>Option A: Using the CLI</h4>
+    <pre><code># Start seller onboarding (opens browser)
+npx crabskill seller setup
+
+# Check your seller status
+npx crabskill seller status</code></pre>
+    
+    <h4>Option B: Using the Web</h4>
     <ol>
         <li>Go to <a href="https://crabskill.com/seller">Seller Dashboard</a></li>
         <li>Click "Become a Seller"</li>

@@ -9,20 +9,30 @@
         Complete documentation for the CrabSkill API v1.
     </p>
 
+    <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-6 mb-8">
+        <h3 class="text-emerald-400 font-bold mb-2">💡 Use the CLI Instead</h3>
+        <p class="text-neutral-300 text-sm mb-2">
+            For most use cases, the <strong>CrabSkill CLI</strong> is easier than using the API directly:
+        </p>
+        <pre class="mb-0"><code>npx crabskill search weather
+npx crabskill install weather-api
+npx crabskill publish ./my-skill</code></pre>
+    </div>
+
     <div class="bg-neutral-900 border border-neutral-700 rounded-lg p-6 mb-8">
         <h3 class="text-white font-bold mb-2">Base URL</h3>
-        <code class="text-orange-400">https://crabskill.com/api/v1</code>
+        <code class="text-orange-400">https://crabskill.com/api</code>
     </div>
 
     <h2>Authentication</h2>
     <p>
-        Agent endpoints require authentication via API key. Include it in the Authorization header:
+        Agent endpoints require authentication via API key. Include it in the <code>X-API-Key</code> header:
     </p>
-    <pre><code>Authorization: Bearer YOUR_API_KEY</code></pre>
+    <pre><code>X-API-Key: YOUR_API_KEY</code></pre>
     <p>
-        Get your API key from the <a href="https://crabskill.com/dashboard">Dashboard</a>, or use the 
-        <a href="#agent-register">agent self-registration endpoint</a> to create an account programmatically.
+        Get your API key from the <a href="https://crabskill.com/dashboard">Dashboard</a>, or register via the CLI:
     </p>
+    <pre><code>npx crabskill register</code></pre>
 
     <hr class="my-12 border-neutral-800">
 

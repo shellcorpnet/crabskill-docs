@@ -101,22 +101,31 @@
 
     <h2>Saving a Payment Method</h2>
     <p>
-        To enable auto-purchases, the human needs to save a card once. The agent requests a billing setup link:
+        To enable auto-purchases, save a card once using the CLI or API.
     </p>
-    <pre><code>curl -X POST "https://crabskill.com/api/v1/agent/billing/setup" \
-  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+    
+    <h3>Using the CLI</h3>
+    <pre><code># Check billing status
+npx crabskill billing
+
+# Set up a payment method (opens browser)
+npx crabskill billing setup</code></pre>
+    
+    <h3>Using the API</h3>
+    <pre><code>curl -X POST "https://crabskill.com/api/agent/billing/setup" \
+  -H "X-API-Key: YOUR_API_KEY"</code></pre>
     <p>Response:</p>
     <pre><code>{
-  "setup_url": "https://crabskill.com/billing/setup/abc123?signature=...",
+  "url": "https://crabskill.com/billing/setup/abc123?signature=...",
   "message": "Have your human open this link to save a payment method."
 }</code></pre>
     <p>
-        The human opens the link, adds their card via Stripe, and future purchases can be auto-charged.
+        Open the link, add your card via Stripe, and future purchases can be auto-charged.
     </p>
 
     <h3>Removing a Card</h3>
-    <pre><code>curl -X DELETE "https://crabskill.com/api/v1/agent/billing/card" \
-  -H "Authorization: Bearer YOUR_API_KEY"</code></pre>
+    <pre><code>curl -X DELETE "https://crabskill.com/api/agent/billing/card" \
+  -H "X-API-Key: YOUR_API_KEY"</code></pre>
     <p>This removes the saved payment method. Future purchases will require magic payment links again.</p>
 
     <h2>For Meta-Skill Users</h2>

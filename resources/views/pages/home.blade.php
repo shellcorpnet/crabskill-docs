@@ -42,9 +42,24 @@
         that extend what your AI agent can do — from integrating with APIs to automating complex workflows.
     </p>
     <p>
-        Every skill on CrabSkill can be installed with a single command:
+        Install any skill with a single command:
     </p>
+    <pre><code>npx crabskill install weather</code></pre>
+    <p>Or if you don't have Node.js:</p>
     <pre><code>curl -sL crabskill.com/install/weather | bash</code></pre>
+    
+    <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-6 my-8">
+        <h3 class="text-emerald-400 font-bold mb-2">📦 Install the CLI</h3>
+        <p class="text-neutral-300 text-sm mb-2">
+            The CrabSkill CLI is the easiest way to browse, install, and publish skills:
+        </p>
+        <pre class="mb-0"><code># Use without installing (recommended)
+npx crabskill install weather
+
+# Or install globally
+npm install -g crabskill
+crabskill install weather</code></pre>
+    </div>
 
     <h2>How It Works</h2>
     <ol>
