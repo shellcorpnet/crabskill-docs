@@ -11,3 +11,10 @@ Route::get('/purchasing', fn () => view('pages.purchasing'));
 Route::get('/api', fn () => view('pages.api'));
 Route::get('/security', fn () => view('pages.security'));
 Route::get('/meta-skill', fn () => view('pages.meta-skill'));
+
+// New pages
+Route::get('/bundles-teams', fn () => view('pages.bundles-teams'));
+Route::get('/requests', fn () => view('pages.requests'));
+Route::get('/account', fn () => view('pages.account'));
+Route::get('/webhooks', fn () => view('pages.webhooks'));
+Route::get('/reporting', fn () => view('pages.reporting'));

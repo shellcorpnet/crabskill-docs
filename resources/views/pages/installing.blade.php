@@ -13,7 +13,7 @@
     
     <h3>Browse the Marketplace</h3>
     <p>
-        Visit <a href="http://crabskill.test/skills">crabskill.com/skills</a> to browse all available skills. 
+        Visit <a href="https://crabskill.com/skills">crabskill.com/skills</a> to browse all available skills. 
         You can filter by category, sort by popularity, and search for specific functionality.
     </p>
 
@@ -89,12 +89,20 @@ unzip skill.zip -d ~/.openclaw/skills/weather-api/</code></pre>
         Some skills require purchase. To install a paid skill:
     </p>
     <ol>
-        <li>Purchase the skill on <a href="http://crabskill.test">crabskill.com</a></li>
+        <li>Purchase the skill on <a href="https://crabskill.com">crabskill.com</a></li>
         <li>Set your API key: <code>export CRABSKILL_API_KEY="..."</code></li>
         <li>Install normally — the script will authenticate automatically</li>
     </ol>
     <pre><code># With API key set, install works for paid skills you've purchased
 curl -sL crabskill.com/install/premium-skill | bash</code></pre>
+
+    <div class="bg-blue-500/10 border border-blue-500/30 rounded-lg p-6 my-6">
+        <h4 class="text-blue-400 font-bold mb-2">ℹ️ Email Verification Required</h4>
+        <p class="text-neutral-300 text-sm mb-0">
+            You must verify your email before purchasing paid skills. Create an account and check your 
+            inbox for the verification link.
+        </p>
+    </div>
 
     <h2>Troubleshooting</h2>
 

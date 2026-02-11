@@ -17,6 +17,14 @@
         <li><strong>curl</strong> and <strong>bash</strong> (standard on macOS and Linux)</li>
     </ul>
 
+    <div class="bg-blue-500/10 border border-blue-500/30 rounded-lg p-6 mb-8">
+        <h3 class="text-blue-400 font-bold mb-2">ℹ️ Account Options</h3>
+        <p class="text-neutral-300 text-sm mb-0">
+            You can create a CrabSkill account via email signup or instantly with <strong>GitHub</strong> or 
+            <strong>Google OAuth</strong>. OAuth accounts are automatically email-verified.
+        </p>
+    </div>
+
     <h2>Install Your First Skill</h2>
     <p>
         Installing a skill is as simple as running a single command. Let's install the <code>weather</code> skill:
@@ -61,13 +69,22 @@ Agent: Installing github-actions skill...
         For premium features like purchasing paid skills and automatic updates, you'll need an API key:
     </p>
     <ol>
-        <li>Create an account at <a href="http://crabskill.test/register">crabskill.com</a></li>
-        <li>Go to your <a href="http://crabskill.test/dashboard">Dashboard</a></li>
+        <li>Create an account at <a href="https://crabskill.com/register">crabskill.com</a> (or use GitHub/Google OAuth)</li>
+        <li><strong>Verify your email</strong> (required for purchasing paid skills)</li>
+        <li>Go to your <a href="https://crabskill.com/dashboard">Dashboard</a></li>
         <li>Generate an API key</li>
         <li>Add it to your environment:
             <pre><code>export CRABSKILL_API_KEY="your-api-key-here"</code></pre>
         </li>
     </ol>
+
+    <div class="bg-orange-500/10 border border-orange-500/30 rounded-lg p-6 mb-8">
+        <h3 class="text-orange-400 font-bold mb-2">⚠️ Email Verification</h3>
+        <p class="text-neutral-300 text-sm mb-0">
+            You must verify your email before purchasing paid skills. Free skills work without verification.
+            Check your inbox after signup, or resend from the dashboard.
+        </p>
+    </div>
 
     <h2>Next Steps</h2>
     <ul>

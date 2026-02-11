@@ -79,6 +79,33 @@
                 </div>
 
                 <div>
+                    <h3 class="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Features</h3>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="/bundles-teams" class="block px-3 py-2 rounded-lg text-sm {{ request()->is('bundles-teams') ? 'bg-orange-600/20 text-orange-500' : 'text-neutral-400 hover:text-white hover:bg-neutral-800' }}">
+                                Bundles & Teams
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/requests" class="block px-3 py-2 rounded-lg text-sm {{ request()->is('requests') ? 'bg-orange-600/20 text-orange-500' : 'text-neutral-400 hover:text-white hover:bg-neutral-800' }}">
+                                Skill Requests
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Account</h3>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="/account" class="block px-3 py-2 rounded-lg text-sm {{ request()->is('account') ? 'bg-orange-600/20 text-orange-500' : 'text-neutral-400 hover:text-white hover:bg-neutral-800' }}">
+                                Account & Verification
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
                     <h3 class="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Advanced</h3>
                     <ul class="space-y-1">
                         <li>
@@ -89,6 +116,11 @@
                         <li>
                             <a href="/api" class="block px-3 py-2 rounded-lg text-sm {{ request()->is('api') ? 'bg-orange-600/20 text-orange-500' : 'text-neutral-400 hover:text-white hover:bg-neutral-800' }}">
                                 API Reference
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/webhooks" class="block px-3 py-2 rounded-lg text-sm {{ request()->is('webhooks') ? 'bg-orange-600/20 text-orange-500' : 'text-neutral-400 hover:text-white hover:bg-neutral-800' }}">
+                                Webhooks
                             </a>
                         </li>
                     </ul>
@@ -103,13 +135,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href="http://crabskill.test" target="_blank" class="block px-3 py-2 rounded-lg text-sm text-neutral-400 hover:text-white hover:bg-neutral-800">
-                                Marketplace →
+                            <a href="/reporting" class="block px-3 py-2 rounded-lg text-sm {{ request()->is('reporting') ? 'bg-orange-600/20 text-orange-500' : 'text-neutral-400 hover:text-white hover:bg-neutral-800' }}">
+                                Reporting & Safety
                             </a>
                         </li>
                         <li>
-                            <a href="http://crabskill.test/about" target="_blank" class="block px-3 py-2 rounded-lg text-sm text-neutral-400 hover:text-white hover:bg-neutral-800">
-                                About →
+                            <a href="https://crabskill.com" target="_blank" class="block px-3 py-2 rounded-lg text-sm text-neutral-400 hover:text-white hover:bg-neutral-800">
+                                Marketplace →
                             </a>
                         </li>
                     </ul>

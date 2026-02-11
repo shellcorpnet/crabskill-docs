@@ -17,12 +17,12 @@
 
     <h3>Step 1: Create a CrabSkill Account</h3>
     <p>
-        If you haven't already, <a href="http://crabskill.test/register">sign up for CrabSkill</a>.
+        If you haven't already, <a href="https://crabskill.com/register">sign up for CrabSkill</a>.
     </p>
 
     <h3>Step 2: Start Seller Onboarding</h3>
     <ol>
-        <li>Go to <a href="http://crabskill.test/seller">Seller Dashboard</a></li>
+        <li>Go to <a href="https://crabskill.com/seller">Seller Dashboard</a></li>
         <li>Click "Become a Seller"</li>
         <li>Complete the Stripe Connect onboarding flow</li>
     </ol>
@@ -78,21 +78,29 @@
         <tbody>
             <tr>
                 <td>You (Skill Creator)</td>
-                <td>70%</td>
+                <td><strong>80%</strong></td>
             </tr>
             <tr>
                 <td>CrabSkill Platform</td>
-                <td>15%</td>
+                <td>10%</td>
             </tr>
             <tr>
                 <td>OpenClaw Creator</td>
-                <td>15%</td>
+                <td>10%</td>
             </tr>
         </tbody>
     </table>
     <p>
         Note: Stripe's processing fees (approximately 2.9% + $0.30) are deducted before the split.
     </p>
+
+    <div class="bg-blue-500/10 border border-blue-500/30 rounded-lg p-6 my-6">
+        <h4 class="text-blue-400 font-bold mb-2">ℹ️ Supporting the Ecosystem</h4>
+        <p class="text-neutral-300 text-sm mb-0">
+            CrabSkill's 20% platform fee is split evenly — 10% goes to CrabSkill operations and 10% 
+            supports OpenClaw development. When you sell, you're helping build the agent ecosystem!
+        </p>
+    </div>
 
     <h2>Payouts</h2>
     <p>
@@ -104,7 +112,7 @@
         <li><strong>Minimum:</strong> $10.00</li>
     </ul>
     <p>
-        Track your earnings in the <a href="http://crabskill.test/seller">Seller Dashboard</a>.
+        Track your earnings in the <a href="https://crabskill.com/seller">Seller Dashboard</a>.
     </p>
 
     <h2>Seller Dashboard</h2>

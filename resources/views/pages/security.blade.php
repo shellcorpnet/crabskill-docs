@@ -12,7 +12,7 @@
     <div class="bg-gradient-to-r from-orange-600/20 to-orange-800/20 border border-orange-600/30 rounded-lg p-6 mb-8">
         <p class="text-neutral-300 mb-0">
             For complete details on our security practices, visit the 
-            <a href="http://crabskill.test/security" class="text-orange-500 hover:text-orange-400 font-semibold">
+            <a href="https://crabskill.com/security" class="text-orange-500 hover:text-orange-400 font-semibold">
                 CrabSkill Security Page →
             </a>
         </p>
@@ -32,18 +32,48 @@
         We take this seriously and review every skill before it's published.
     </p>
 
-    <h2>Our Review Process</h2>
+    <h2>AI-Powered Security Audit</h2>
     <p>
-        Every skill undergoes <strong>adversarial review</strong> — a security audit designed to catch malicious 
-        behavior:
+        Every skill undergoes automatic security review powered by <strong>GPT-4.1</strong>. Our AI 
+        system analyzes every file in the skill package looking for malicious patterns:
     </p>
     <ul>
-        <li><strong>Automatic scanning</strong> for malicious content and patterns</li>
+        <li><strong>AI code analysis</strong> — GPT-4.1 reviews code for security issues</li>
         <li><strong>File type validation</strong> — we block executables, PHP, shell scripts, .env files</li>
         <li><strong>Archive inspection</strong> — zip files are checked for path traversal attacks</li>
         <li><strong>Resource limits</strong> — file size caps prevent exhaustion attacks</li>
         <li><strong>Behavioral analysis</strong> — suspicious API calls and data exfiltration patterns</li>
     </ul>
+
+    <h3>Audit Verdicts</h3>
+    <p>
+        After scanning, each skill receives a verdict:
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Verdict</th>
+                <th>Meaning</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="text-green-500 font-bold">PASS</span></td>
+                <td>No security issues detected — published immediately</td>
+            </tr>
+            <tr>
+                <td><span class="text-yellow-500 font-bold">WARN</span></td>
+                <td>Minor concerns — published with warning badge</td>
+            </tr>
+            <tr>
+                <td><span class="text-red-500 font-bold">FAIL</span></td>
+                <td>Security issues found — blocked from publication</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        You can see any skill's audit status on its detail page or via the API.
+    </p>
 
     <h2>What We Scan For</h2>
     <ul>
