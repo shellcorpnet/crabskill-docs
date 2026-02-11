@@ -52,6 +52,17 @@
                 </div>
 
                 <div>
+                    <h3 class="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Purchasing</h3>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="/purchasing" class="block px-3 py-2 rounded-lg text-sm {{ request()->is('purchasing') ? 'bg-orange-600/20 text-orange-500' : 'text-neutral-400 hover:text-white hover:bg-neutral-800' }}">
+                                Purchasing & Billing
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
                     <h3 class="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">For Creators</h3>
                     <ul class="space-y-1">
                         <li>

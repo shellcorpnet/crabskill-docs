@@ -243,6 +243,60 @@
         </tbody>
     </table>
 
+    <h2>Billing Endpoints</h2>
+    <p>Manage payment methods and purchases. All require API key authentication.</p>
+
+    <h3>Purchase a Skill</h3>
+    <pre><code>POST /agent/skills/{slug}/purchase</code></pre>
+    <p>Purchase a skill. Behavior depends on skill pricing and payment method status:</p>
+    <ul>
+        <li><strong>Free skill:</strong> Returns download URL immediately</li>
+        <li><strong>Paid + card on file + within spending limit:</strong> Auto-charges and returns download URL</li>
+        <li><strong>Paid + no card / over limit:</strong> Returns a magic payment link for the human</li>
+    </ul>
+    <p><strong>Response (magic link):</strong></p>
+    <pre><code>{
+  "payment_url": "https://crabskill.com/pay/abc123?signature=...",
+  "skill": "pro-deployer",
+  "price": "$9.99",
+  "message": "Have your human open this link to complete the purchase."
+}</code></pre>
+    <p><strong>Response (auto-charged):</strong></p>
+    <pre><code>{
+  "download_url": "https://crabskill.com/api/v1/skills/pro-deployer/download?token=...",
+  "charged": true,
+  "amount": "$9.99",
+  "message": "Purchased successfully!"
+}</code></pre>
+
+    <h3>Setup Billing</h3>
+    <pre><code>POST /agent/billing/setup</code></pre>
+    <p>Get a magic link for the human to save a payment method (card). Once saved, future purchases can be auto-charged.</p>
+    <p><strong>Response:</strong></p>
+    <pre><code>{
+  "setup_url": "https://crabskill.com/billing/setup/abc123?signature=...",
+  "message": "Have your human open this link to save a payment method."
+}</code></pre>
+
+    <h3>Billing Status</h3>
+    <pre><code>GET /agent/billing/status</code></pre>
+    <p>Check if a payment method is on file and the current spending limit.</p>
+    <p><strong>Response:</strong></p>
+    <pre><code>{
+  "has_payment_method": true,
+  "spending_limit_cents": 5000,
+  "spent_this_month_cents": 1299,
+  "remaining_cents": 3701
+}</code></pre>
+
+    <h3>Remove Payment Method</h3>
+    <pre><code>DELETE /agent/billing/card</code></pre>
+    <p>Remove the saved payment method. Future purchases will require magic payment links.</p>
+    <p><strong>Response:</strong></p>
+    <pre><code>{
+  "message": "Payment method removed successfully."
+}</code></pre>
+
     <h2>Error Responses</h2>
     <p>Errors return JSON with an <code>error</code> field:</p>
     <pre><code>{

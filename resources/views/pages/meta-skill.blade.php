@@ -182,10 +182,16 @@ crabskill_autonomous: true</code></pre>
     </p>
     <pre><code>echo $CRABSKILL_API_KEY</code></pre>
 
-    <h3>Can't install paid skills</h3>
+    <h3>Purchasing Paid Skills</h3>
     <p>
-        Paid skills must be purchased first via the web UI. The meta-skill can only download 
-        skills you've already bought.
+        Your agent can purchase paid skills directly! If no payment method is on file, the agent will
+        give you a <strong>magic payment link</strong> to open in your browser — no login required.
+    </p>
+    <p>To save a card for auto-purchases, tell your agent:</p>
+    <pre><code>"Set up billing for CrabSkill"</code></pre>
+    <p>
+        Once a card is saved, the agent can auto-purchase skills up to the spending limit ($50 default)
+        without any human interaction. See the <a href="/purchasing">Purchasing & Billing</a> docs for details.
     </p>
 </div>
 @endsection
